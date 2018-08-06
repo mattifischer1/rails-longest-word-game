@@ -1,0 +1,18 @@
+<h1>Result</h1>
+
+
+<p>
+  <% if @test_word == true %>
+    <% if @english_word == true %>
+  Congratulations! <%="{@answer.upcase}"%> is a valid english word.
+    <% else %>
+  Sorry, but  <%="#{@answer.upcase}"%> does not seem to be an english word.
+    <% end %>
+  <% else %>
+  Sorry, <%="#{@answer.upcase}"%> cannot be build from <%="#{@letters}"%>.
+  <% end %>
+</p>
+
+<p class="link">
+  <%= link_to "Play Again", new_path %>
+</p>
